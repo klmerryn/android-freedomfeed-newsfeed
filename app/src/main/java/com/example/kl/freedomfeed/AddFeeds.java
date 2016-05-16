@@ -10,8 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import javax.xml.datatype.Duration;
 
 public class AddFeeds extends AppCompatActivity {
 
@@ -101,11 +104,14 @@ public class AddFeeds extends AppCompatActivity {
                 addFeed(this.feeds, CITIZEN_EDU);
                 break;
             case (R.id.custom):
-                setCustomFeed();
+                //setCustomFeed();
                 break;
         }
     }
 
+    public void showComingSoon(View view) {
+        Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
+    }
 
     public void goMain(View view){
         Intent intent = new Intent(this, MainActivity.class);
