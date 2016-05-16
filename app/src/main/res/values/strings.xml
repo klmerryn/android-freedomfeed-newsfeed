@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FreedomFeed</string>
+    <string name="subscribe_topics">Subscribe by Topic</string>
+    <string name="privacy">Privacy</string>
+    <string name="censorship">Censorship</string>
+    <string name="human_rights">Human Rights</string>
+    <string name="custom">Custom feed</string>
+    <string name="launch">Get Started</string>
+    <string name="startover">Restart</string>
+    <string name="submit">Submit</string>
+    <string name="customfeed">Enter feed URL</string>
+    <string name="citizen_edu">Citizenship and Global Education</string>
+    <string name="back">Back</string>
+    <string name="welcome">Welcome to FreedomFeed, the social-purpose news aggregator.
+        \n\nSelect topics to add them to your newsfeed. Choose from a variety of topics,
+        or add your own.</string>
+</resources>

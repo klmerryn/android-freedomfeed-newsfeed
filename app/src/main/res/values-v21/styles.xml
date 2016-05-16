@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FreedomFeedTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/colorPrimaryLightBlue</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryBlue</item>
+        <item name="android:colorForeground">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorLight</item>
+    </style>
+</resources>
