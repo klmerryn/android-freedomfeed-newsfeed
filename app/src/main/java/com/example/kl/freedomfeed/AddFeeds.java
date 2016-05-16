@@ -13,7 +13,19 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/*
+ * Class to build a list of feeds based on user selection. Feeds are 
+ * sent to Display actvity in the form of ArrayList<String>, where they
+ * are parsed and content is fetched. 
+ */
 public class AddFeeds extends AppCompatActivity {
+
+    // Button display
+    private final String SUBSCRIBE = "Subscribe";
+    private final String CANCEL = "Cancel";
+
+    // Build list of feeds. Temporary solution pending persistent data.
+    ArrayList<String> feeds = new ArrayList<>();
 
     // Temporary solution prior to actual database implementation.
     // stock URLs on different themes.
@@ -23,26 +35,11 @@ public class AddFeeds extends AppCompatActivity {
     final static String[] CENSORSHIP = new String[]{"https://queryfeed.net/tw?q=internetcensorship"};
     final static String[] CITIZEN_EDU = new String[]{"http://esj.sagepub.com/rss/recent.xml", "http://esj.sagepub.com/rss/ahead.xml", "http://esj.sagepub.com/rss/mfr.xml"};
 
-    // Button display
-    private final String SUBSCRIBE = "Subscribe";
-    private final String CANCEL = "Cancel";
-
-    // Build list of feeds. Temporary solution pending persistent data.
-    ArrayList<String> feeds = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_feeds);
     }
-
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        Intent intent = getIntent();
-//        feeds = intent.getStringArrayListExtra("inputFeeds");
-//        setContentView(R.layout.activity_add_feeds);
-//    }
 
     private void setCustomFeed() {
 
@@ -58,6 +55,7 @@ public class AddFeeds extends AppCompatActivity {
         alertDialogBuilder.setCancelable(true)
                 .setPositiveButton(SUBSCRIBE, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        
                         //@TODO: Input will be parsed and verified as a single well-formatted string.
                         // This will involve another AsyncTask to verify the URL. Invalid URL
                         // should erase the edittextview and prompt the user to enter new URL or
